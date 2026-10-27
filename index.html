@@ -17,6 +17,7 @@
   --warn:#7D5200; --warn-bg:#FBF0D6; --bad:#B3261E; --bad-bg:#FBE4E2;
   --grid:#BFCBD2; --plot-bg:#FFFFFF; --axis:#13232C;
   --c0:#1D63A8; --c1:#7A47B8; --c2:#1E8A5A; --c3:#C9461D; --c4:#B0307A;
+  --r0:#111111; --r1:#E5533D; --r2:#9E1B25; --r3:#4A9BE0; --r4:#1B3F8F;
   --glass:#5E7A88; --liq-water:#8EC9F0; --metal:#8A9AA3; --plate:#3B4A53; --plate-top:#5B6C76;
   --solid:#F4F6F7; --solid-ice:#CFEAF7; --table:#C9D3D8; --mix:#D6EAF4;
   --egg:#D98C4E; --egg-edge:#9B5A2B; --egg-hi:#F0B27A;
@@ -31,6 +32,7 @@
     --warn:#F0C45A; --warn-bg:#35290F; --bad:#FF8A80; --bad-bg:#3A1C1A;
     --grid:#34505D; --plot-bg:#122027; --axis:#E6EEF2;
     --c0:#6DB2F0; --c1:#C39BF2; --c2:#5FD39B; --c3:#FF8F66; --c4:#F07AB5;
+  --r0:#F2F2F2; --r1:#FF8A7A; --r2:#E5363F; --r3:#8EC5FF; --r4:#3B82F6;
     --glass:#8FB0C0; --liq-water:#3F86B5; --metal:#6F838E; --plate:#0C1318; --plate-top:#33444E;
     --solid:#D9DFE2; --solid-ice:#8FC5DD; --table:#22333C; --mix:#2E4A5A;
     color-scheme:dark;
@@ -43,6 +45,7 @@
   --warn:#F0C45A; --warn-bg:#35290F; --bad:#FF8A80; --bad-bg:#3A1C1A;
   --grid:#34505D; --plot-bg:#122027; --axis:#E6EEF2;
   --c0:#6DB2F0; --c1:#C39BF2; --c2:#5FD39B; --c3:#FF8F66; --c4:#F07AB5;
+  --r0:#F2F2F2; --r1:#FF8A7A; --r2:#E5363F; --r3:#8EC5FF; --r4:#3B82F6;
   --glass:#8FB0C0; --liq-water:#3F86B5; --metal:#6F838E; --plate:#0C1318; --plate-top:#33444E;
   --solid:#D9DFE2; --solid-ice:#8FC5DD; --table:#22333C; --mix:#2E4A5A;
   color-scheme:dark;
@@ -300,7 +303,7 @@ function shownRun(){
   return c;
 }
 function runName(r){return r.salt?'소금물 '+r.salt+' %':'물'}
-function runColor(r){return 'var(--c'+r.ci+')'}
+function runColor(r){return 'var(--r'+r.ci+')'}
 function fmtT(v){return (Math.round(v*10)/10).toFixed(1)}
 function fmtClock(min){
   var sec=Math.floor(min*60+1e-6), m=Math.floor(sec/60), s=sec%60;
